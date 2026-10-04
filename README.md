@@ -46,6 +46,7 @@ src/          gemeinsamer Code (Content-Script, Popup, Background, Icons)
 manifests/    firefox.json (Manifest V2) und chrome.json (Manifest V3)
 build.sh      baut dist/firefox, dist/chrome und die Release-Pakete
 test/         Testseite mit Beispielpreisen
+store/        Store-Einreichung: CHROME.md, FIREFOX.md, Grafiken und render.sh
 ```
 
 ```sh
@@ -57,3 +58,7 @@ Zum Entwickeln `dist/chrome` bzw. `dist/firefox/manifest.json` direkt im Browser
 ## Datenschutz
 
 Die Erweiterung speichert nur deine Einstellungen lokal und überträgt keine Daten – siehe [PRIVACY.md](PRIVACY.md).
+
+## Lizenz
+
+[MIT](LICENSE)
