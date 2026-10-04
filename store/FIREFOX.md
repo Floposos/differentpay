@@ -62,25 +62,23 @@ Was kostet das wirklich? DifferentPay zeigt dir Preise nicht in Euro, sondern in
 
 Statt „249,00 €“ steht dort z. B. „⏱ 14,4 h“ – und bei größeren Anschaffungen zusätzlich die Zahl der Arbeitstage. So siehst du auf einen Blick, ob dir etwas den Aufwand wirklich wert ist.
 
-<b>So funktioniert's</b>
+SO FUNKTIONIERT'S
 1. Auf das DifferentPay-Symbol in der Symbolleiste klicken
 2. Netto-Monatslohn und Wochenstunden eintragen
 3. Fertig – Preise auf Webseiten werden sofort umgerechnet
 
-<b>Funktionen</b>
-<ul>
-<li>Individueller Stundenlohn aus Monatslohn und Wochenarbeitszeit</li>
-<li>Jederzeit an- und ausschalten – per Schalter oder Tastenkürzel Alt+Shift+H, ohne Neuladen der Seite</li>
-<li>Originalpreis per Mauszeiger (Tooltip) oder auf Wunsch klein daneben</li>
-<li>Große Beträge zusätzlich in Arbeitstagen</li>
-<li>Erkennt gängige Preisformate: 19,99 €, € 1.299,00, 29,– €, $1,049.95, CHF 120.50, £5, hochgestellte Cent-Beträge</li>
-<li>Funktioniert auch bei nachgeladenen Produkten und beim Wechsel von Produktvarianten</li>
-</ul>
+FUNKTIONEN
+• Individueller Stundenlohn aus Monatslohn und Wochenarbeitszeit
+• Jederzeit an- und ausschalten – per Schalter oder Tastenkürzel Alt+Shift+H, ohne Neuladen der Seite
+• Originalpreis per Mauszeiger (Tooltip) oder auf Wunsch klein daneben
+• Große Beträge zusätzlich in Arbeitstagen
+• Erkennt gängige Preisformate: 19,99 €, € 1.299,00, 29,– €, $1,049.95, CHF 120.50, £5, hochgestellte Cent-Beträge
+• Funktioniert auch bei nachgeladenen Produkten und beim Wechsel von Produktvarianten
 
-<b>Datenschutz</b>
-Deine Angaben bleiben auf deinem Gerät. DifferentPay sendet keine Daten, nutzt kein Tracking und keine Werbung. Der Quellcode ist offen: <a href="https://github.com/Floposos/differentpay">github.com/Floposos/differentpay</a>
+DATENSCHUTZ
+Deine Angaben bleiben auf deinem Gerät. DifferentPay sendet keine Daten, nutzt kein Tracking und keine Werbung. Der Quellcode ist offen: https://github.com/Floposos/differentpay
 
-<b>Berechnung</b>
+BERECHNUNG
 Stundenlohn = Monatslohn ÷ (Wochenstunden × 52 ÷ 12). Ein Arbeitstag entspricht einem Fünftel deiner Wochenstunden. Fremdwährungen werden nicht umgerechnet.
 ```
 
