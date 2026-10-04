@@ -46,6 +46,7 @@ src/          gemeinsamer Code (Content-Script, Popup, Background, Icons)
 manifests/    firefox.json (Manifest V2) und chrome.json (Manifest V3)
 build.sh      baut dist/firefox, dist/chrome und die Release-Pakete
 test/         Testseite mit Beispielpreisen
+store/        Store-Einreichung: CHROME.md, FIREFOX.md, Grafiken und render.sh
 ```
 
 ```sh
