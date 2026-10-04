@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="../../src/content.css">
+  <script src="shim.js"></script>
+  <style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      padding: 26px 360px 26px 28px;
+    }
+    .card { font-size: 15px; }
+    .card .product-img { height: 150px; font-size: 70px; }
+    .card h3 { margin: 12px 0 4px; font-size: 15px; font-weight: 600; }
+    .card .stars { color: #f59e0b; font-size: 13px; }
+    .card .price { margin-top: 8px; font-size: 22px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="caption">
+    <h1>Was kostet das wirklich? Deine Arbeitszeit.</h1>
+    <p>DifferentPay ersetzt Preise auf Shopping-Seiten durch die Stunden, die du dafür arbeiten musst.</p>
+  </div>
+
+  <div class="window">
+    <div class="chrome-bar">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="url">beispiel-shop.de/elektronik</div>
+      <img class="ext-icon" src="../../src/icons/icon.svg" alt="">
+    </div>
+    <div class="shop-head">
+      <div class="logo">beispiel·shop</div>
+      <div class="search">Suchen …</div>
+      <div class="nav">Elektronik · Mode · Haushalt</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="product-img">🎧</div>
+        <h3>Noise-Cancelling Kopfhörer</h3>
+        <div class="stars">★★★★☆ 1.204</div>
+        <div class="price">249,00 €</div>
+      </div>
+      <div class="card">
+        <div class="product-img">📱</div>
+        <h3>Smartphone Pro 256 GB</h3>
+        <div class="stars">★★★★★ 3.871</div>
+        <div class="price">899,00 €</div>
+      </div>
+      <div class="card">
+        <div class="product-img">👟</div>
+        <h3>Laufschuh Air Runner</h3>
+        <div class="stars">★★★★☆ 642</div>
+        <div class="price">129,95 €</div>
+      </div>
+      <div class="card">
+        <div class="product-img">☕</div>
+        <h3>Espresso-Bohnen 1 kg</h3>
+        <div class="stars">★★★★★ 9.310</div>
+        <div class="price">14,99 €</div>
+      </div>
+      <div class="card">
+        <div class="product-img">💻</div>
+        <h3>Notebook 14" Ultra</h3>
+        <div class="stars">★★★★☆ 518</div>
+        <div class="price">1.299,00 €</div>
+      </div>
+      <div class="card">
+        <div class="product-img">⌚</div>
+        <h3>Smartwatch Sport</h3>
+        <div class="stars">★★★★☆ 2.087</div>
+        <div class="price">199,99 €</div>
+      </div>
+    </div>
+  </div>
+
+  <iframe class="popup" src="popup-demo.html" style="right: 84px; top: 194px;"></iframe>
+
+  <script src="../../src/content.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../src/popup/popup.css">
+  <script src="shim.js"></script>
+</head>
+<body>
+  <header>
+    <img src="../../src/icons/icon.svg" alt="" width="28" height="28">
+    <h1>DifferentPay</h1>
+    <label class="switch">
+      <input type="checkbox" id="enabled">
+      <span class="slider"></span>
+    </label>
+  </header>
+
+  <p class="status" id="status"></p>
+
+  <label class="field">
+    <span>Monatslohn (netto)</span>
+    <div class="input-wrap">
+      <input type="number" id="monthlySalary" min="0" step="50">
+      <span class="unit">€</span>
+    </div>
+  </label>
+
+  <label class="field">
+    <span>Arbeitsstunden pro Woche</span>
+    <div class="input-wrap">
+      <input type="number" id="hoursPerWeek" min="1" max="100" step="0.5">
+      <span class="unit">h</span>
+    </div>
+  </label>
+
+  <label class="check">
+    <input type="checkbox" id="showOriginal">
+    <span>Originalpreis klein daneben anzeigen</span>
+  </label>
+
+  <div class="rate">
+    Dein Stundenlohn: <strong id="rate">–</strong>
+  </div>
+
+  <footer>Schnell umschalten: <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd></footer>
+
+  <script src="../../src/popup/popup.js"></script>
+</body>
+</html>
