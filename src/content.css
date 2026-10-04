@@ -1,0 +1,27 @@
+.dp-hide {
+  display: none !important;
+}
+
+.dp-hours {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0 0.3em;
+  border-radius: 0.3em;
+  background: rgba(15, 118, 110, 0.12);
+  color: inherit;
+  font-variant-numeric: tabular-nums;
+  line-height: inherit;
+  cursor: help;
+}
+
+.dp-hours.dp-inline {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.dp-hours .dp-orig {
+  margin-left: 0.35em;
+  font-size: 0.75em;
+  opacity: 0.65;
+  font-weight: normal;
+}

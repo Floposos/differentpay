@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>DifferentPay Testseite</title>
+  <link rel="stylesheet" href="../src/content.css">
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 20px; }
+    .card { border: 1px solid #ddd; padding: 10px; margin: 8px 0; }
+    .big { font-size: 28px; font-weight: bold; color: #b12704; }
+    .a-offscreen { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; }
+    #controls button { margin-right: 6px; }
+  </style>
+  <script>
+    // Minimaler Ersatz für die WebExtension-API
+    (() => {
+      const store = { enabled: true, monthlySalary: 2500, hoursPerWeek: 40, showOriginal: false };
+      const listeners = [];
+      window.browser = {
+        storage: {
+          local: {
+            get: async (defaults) => ({ ...defaults, ...store }),
+            set: async (obj) => {
+              const changes = {};
+              for (const [k, v] of Object.entries(obj)) { changes[k] = { oldValue: store[k], newValue: v }; store[k] = v; }
+              listeners.forEach((l) => l(changes, 'local'));
+            },
+          },
+          onChanged: { addListener: (l) => listeners.push(l) },
+        },
+      };
+      window.__store = store;
+    })();
+  </script>
+</head>
+<body>
+  <div id="controls">
+    <button onclick="browser.storage.local.set({ enabled: !__store.enabled })">Toggle</button>
+    <button onclick="browser.storage.local.set({ showOriginal: !__store.showOriginal })">Original an/aus</button>
+    <button onclick="browser.storage.local.set({ monthlySalary: 5000 })">Lohn 5000</button>
+    <button onclick="addDynamic()">Dynamisch hinzufügen</button>
+    <button onclick="document.getElementById('variant').textContent = '49,99 €'">Variante ändern</button>
+  </div>
+
+  <div class="card" id="c1">Einfach: <span class="price">19,99 €</span></div>
+  <div class="card" id="c2">Symbol vorne: <span>€ 1.299,00</span></div>
+  <div class="card" id="c3">US: <span>$1,049.95</span></div>
+  <div class="card" id="c4">Amazon-Stil:
+    <span class="a-price big"><span class="a-offscreen">24,99 €</span><span aria-hidden="true"><span class="a-price-whole">24<span class="a-price-decimal">,</span></span><span class="a-price-fraction">99</span><span class="a-price-symbol">€</span></span></span>
+  </div>
+  <div class="card" id="c5">Zerlegt: <span class="big"><span>89</span><sup>95</sup> €</span></div>
+  <div class="card" id="c6">Fließtext: Heute nur 9,90 € statt 14,90 EUR – sparen!</div>
+  <div class="card" id="c7">Gerundet: <span>29,– €</span> und <span>CHF 120.50</span> und <span>£5</span></div>
+  <div class="card" id="c8">Kein Preis: Artikelnr. 123456, Größe 42, 3 Stück</div>
+  <div class="card" id="c9">Variante: <span id="variant">39,99 €</span></div>
+  <div class="card" id="c10">Klein: <span>0,49 €</span></div>
+  <div id="dyn"></div>
+  <input value="12,00 €">
+
+  <script>
+    function addDynamic() {
+      const d = document.createElement('div');
+      d.className = 'card';
+      d.innerHTML = 'Nachgeladen: <b>249,00 €</b>';
+      document.getElementById('dyn').appendChild(d);
+    }
+  </script>
+  <script src="../src/content.js"></script>
+</body>
+</html>

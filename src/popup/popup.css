@@ -1,0 +1,150 @@
+:root {
+  --bg: #ffffff;
+  --fg: #111827;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --accent: #0f766e;
+  --accent-soft: #ccfbf1;
+  --field: #f9fafb;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1f2023;
+    --fg: #f3f4f6;
+    --muted: #9ca3af;
+    --border: #3f4147;
+    --accent: #2dd4bf;
+    --accent-soft: #134e4a;
+    --field: #2a2b2f;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 290px;
+  margin: 0;
+  padding: 14px 16px 12px;
+  font: 13px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+h1 {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+}
+
+.status {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.status.warn { color: #b45309; }
+
+.field {
+  display: block;
+  margin-bottom: 10px;
+}
+.field > span {
+  display: block;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+
+.input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--field);
+}
+.input-wrap:focus-within { border-color: var(--accent); }
+
+.input-wrap input {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 8px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  outline: none;
+}
+.unit {
+  padding: 0 10px;
+  color: var(--muted);
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 4px 0 12px;
+  cursor: pointer;
+}
+
+.rate {
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+}
+
+footer {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 11px;
+}
+kbd {
+  padding: 0 4px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font: inherit;
+}
+
+/* Toggle */
+.switch {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  flex: none;
+}
+.switch input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.slider {
+  position: absolute;
+  inset: 0;
+  border-radius: 11px;
+  background: var(--border);
+  transition: background 0.15s;
+}
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s;
+}
+.switch input:checked + .slider { background: var(--accent); }
+.switch input:checked + .slider::before { transform: translateX(18px); }
+.switch input:focus-visible + .slider { outline: 2px solid var(--accent); outline-offset: 2px; }
