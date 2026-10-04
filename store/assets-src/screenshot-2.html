@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de" data-original="true">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="../../src/content.css">
+  <script src="shim.js"></script>
+  <style>
+    .detail {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 44px;
+      padding: 34px 44px;
+    }
+    .detail .product-img { height: 400px; font-size: 180px; }
+    .crumbs { color: var(--muted); font-size: 13px; }
+    h2 { margin: 8px 0 6px; font-size: 30px; }
+    .stars { color: #f59e0b; font-size: 15px; }
+    .stars span { color: var(--muted); }
+    .price-box {
+      margin: 22px 0 6px;
+      font-size: 34px;
+      font-weight: 700;
+      color: #b91c1c;
+    }
+    .vat { color: var(--muted); font-size: 13px; }
+    .variants { display: grid; gap: 8px; max-width: 470px; margin: 20px 0; }
+    .variants div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .variants div.sel { border: 2px solid #1d4ed8; }
+    .variants small { color: var(--muted); font-size: 14px; }
+    .buy {
+      display: inline-block;
+      padding: 14px 42px;
+      border-radius: 26px;
+      background: #facc15;
+      font-weight: 700;
+    }
+    ul { margin: 22px 0 0; padding-left: 20px; color: #374151; line-height: 1.7; font-size: 15px; }
+  </style>
+</head>
+<body>
+  <div class="caption">
+    <h1>Auf einen Blick: Lohnt sich das?</h1>
+    <p>Der Originalpreis bleibt auf Wunsch sichtbar – große Beträge zusätzlich in Arbeitstagen.</p>
+  </div>
+
+  <div class="window">
+    <div class="chrome-bar">
+      <div class="dots"><i></i><i></i><i></i></div>
+      <div class="url">beispiel-shop.de/smartphone-pro-256gb</div>
+      <img class="ext-icon" src="../../src/icons/icon.svg" alt="">
+    </div>
+    <div class="shop-head">
+      <div class="logo">beispiel·shop</div>
+      <div class="search">Suchen …</div>
+      <div class="nav">Elektronik · Mode · Haushalt</div>
+    </div>
+
+    <div class="detail">
+      <div class="product-img">📱</div>
+      <div>
+        <div class="crumbs">Elektronik › Smartphones</div>
+        <h2>Smartphone Pro 256 GB</h2>
+        <div class="stars">★★★★★ <span>3.871 Bewertungen</span></div>
+        <div class="price-box">899,00 €</div>
+        <div class="vat">inkl. MwSt., kostenloser Versand</div>
+        <div class="variants">
+          <div>128 GB<small>749,00 €</small></div>
+          <div class="sel">256 GB<small>899,00 €</small></div>
+          <div>512 GB<small>1.099,00 €</small></div>
+        </div>
+        <div class="buy">In den Warenkorb</div>
+        <ul>
+          <li>6,7"-Display, 120 Hz</li>
+          <li>Akku für bis zu 2 Tage</li>
+          <li>Hülle passend dazu: nur 19,99 €</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../src/content.js"></script>
+</body>
+</html>

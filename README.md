@@ -53,3 +53,7 @@ test/         Testseite mit Beispielpreisen
 ```
 
 Zum Entwickeln `dist/chrome` bzw. `dist/firefox/manifest.json` direkt im Browser laden.
+
+## Datenschutz
+
+Die Erweiterung speichert nur deine Einstellungen lokal und überträgt keine Daten – siehe [PRIVACY.md](PRIVACY.md).

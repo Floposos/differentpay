@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="common.css">
+  <style>
+    html, body { width: 1400px; height: 560px; }
+    body {
+      display: grid;
+      grid-template-columns: 1fr 520px;
+      align-items: center;
+      gap: 60px;
+      padding: 0 90px;
+      color: #fff;
+    }
+    .brand { display: flex; align-items: center; gap: 18px; }
+    .brand img { width: 84px; height: 84px; }
+    .brand h1 { margin: 0; font-size: 60px; letter-spacing: -1px; }
+    p { margin: 18px 0 0; font-size: 28px; line-height: 1.35; opacity: 0.9; }
+    .list { display: grid; gap: 16px; }
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      border-radius: 14px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 22px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    .item span { font-weight: 600; }
+    .item s { margin-right: 12px; color: #9ca3af; font-size: 18px; }
+    .item b { padding: 3px 10px; border-radius: 8px; background: var(--teal-soft); color: var(--teal-dark); }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="brand">
+      <img src="../../src/icons/icon.svg" alt="">
+      <h1>DifferentPay</h1>
+    </div>
+    <p>Sieh Preise so, wie sie sich anfühlen:<br>in Stunden deiner Arbeitszeit.</p>
+  </div>
+  <div class="list">
+    <div class="item"><span>☕ Espresso-Bohnen</span><div><s>14,99 €</s><b>⏱ 52 min</b></div></div>
+    <div class="item"><span>🎧 Kopfhörer</span><div><s>249,00 €</s><b>⏱ 14,4 h</b></div></div>
+    <div class="item"><span>📱 Smartphone</span><div><s>899,00 €</s><b>⏱ 6,5 Arbeitstage</b></div></div>
+  </div>
+</body>
+</html>

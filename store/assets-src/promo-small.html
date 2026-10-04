@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="common.css">
+  <style>
+    html, body { width: 440px; height: 280px; }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 34px;
+      color: #fff;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand img { width: 52px; height: 52px; }
+    .brand h1 { margin: 0; font-size: 34px; letter-spacing: -0.5px; }
+    p { margin: 10px 0 22px; font-size: 18px; opacity: 0.9; }
+    .demo {
+      display: inline-flex;
+      align-self: flex-start;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .demo s { color: #9ca3af; font-weight: 600; }
+    .demo b { padding: 2px 8px; border-radius: 6px; background: var(--teal-soft); color: var(--teal-dark); }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <img src="../../src/icons/icon.svg" alt="">
+    <h1>DifferentPay</h1>
+  </div>
+  <p>Preise in Arbeitsstunden statt Euro</p>
+  <div class="demo"><s>249,00 €</s> → <b>⏱ 14,4 h</b></div>
+</body>
+</html>
