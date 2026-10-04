@@ -95,9 +95,7 @@ Stundenlohn = Monatslohn ÷ (Wochenstunden × 52 ÷ 12). Ein Arbeitstag entspric
 https://github.com/Floposos/differentpay/issues
 ```
 
-**Lizenz:** Das Formular verlangt eine Lizenz. Empfehlung: **MIT License** (freizügig, üblich für kleine
-Open-Source-Tools). Im Repository liegt bisher keine `LICENSE`-Datei – nach deiner Wahl sollte die
-passende Datei dort ergänzt werden, damit Repo und Store übereinstimmen.
+**Lizenz:** **MIT License** (entspricht der `LICENSE`-Datei im Repository)
 
 **Datenschutzerklärung:** Häkchen bei „This add-on has a privacy policy“ setzen und einfügen:
 ```

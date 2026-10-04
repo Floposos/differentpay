@@ -58,3 +58,7 @@ Zum Entwickeln `dist/chrome` bzw. `dist/firefox/manifest.json` direkt im Browser
 ## Datenschutz
 
 Die Erweiterung speichert nur deine Einstellungen lokal und überträgt keine Daten – siehe [PRIVACY.md](PRIVACY.md).
+
+## Lizenz
+
+[MIT](LICENSE)
