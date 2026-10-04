@@ -23,16 +23,18 @@ Den Ordner danach nicht löschen – Chrome lädt die Erweiterung von dort.
 
 ### Firefox
 
-1. `differentpay-firefox-<version>.xpi` herunterladen
-2. `about:debugging#/runtime/this-firefox` öffnen → **Temporäres Add-on laden…** → die `.xpi` wählen
+1. `differentpay-firefox-<version>.zip` herunterladen (nicht entpacken)
+2. `about:debugging#/runtime/this-firefox` öffnen → **Temporäres Add-on laden…** → die `.zip` wählen
 
-Firefox installiert dauerhaft nur von Mozilla signierte Add-ons; temporär geladene verschwinden beim Neustart.
-Dauerhaft geht es so:
+Die Datei liegt bewusst als `.zip` vor: Eine `.xpi` versucht Firefox beim Klick sofort zu installieren und
+blockiert sie, weil sie (noch) nicht von Mozilla signiert ist.
+
+Temporär geladene Add-ons verschwinden beim Neustart von Firefox. Dauerhaft geht es so:
 
 - **Firefox Developer Edition / Nightly:** in `about:config` `xpinstall.signatures.required` auf `false`
-  setzen, dann die `.xpi` per Drag & Drop ins Fenster ziehen
-- **Normales Firefox:** die `.xpi` auf [addons.mozilla.org/developers](https://addons.mozilla.org/developers/)
-  als „Eigene Verbreitung“ (unlisted) kostenlos signieren lassen und die signierte Datei installieren
+  setzen, die Datei in `.xpi` umbenennen und per Drag & Drop ins Fenster ziehen
+- **Normales Firefox:** die Datei auf [addons.mozilla.org/developers](https://addons.mozilla.org/developers/)
+  als „Eigene Verbreitung“ (unlisted) kostenlos signieren lassen und die signierte `.xpi` installieren
 
 ## Berechnung
 
